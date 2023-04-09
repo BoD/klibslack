@@ -33,7 +33,7 @@ import kotlinx.serialization.json.JsonClassDiscriminator
 @OptIn(ExperimentalSerializationApi::class)
 @Serializable
 @JsonClassDiscriminator("type")
-sealed interface JsonEvent {
+internal sealed interface JsonEvent {
   @Serializable
   @SerialName("message")
   data class JsonMessageEvent(

@@ -27,7 +27,7 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonReactionAddRequest(
+internal data class JsonReactionAddRequest(
   val channel: String,
   val name: String,
   val timestamp: String,

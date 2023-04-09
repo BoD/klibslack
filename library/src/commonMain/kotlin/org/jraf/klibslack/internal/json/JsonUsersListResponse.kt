@@ -27,7 +27,7 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonUsersListResponse(
+internal data class JsonUsersListResponse(
   val ok: Boolean,
   val members: List<JsonMember>,
   val response_metadata: JsonResponseMetadata?,

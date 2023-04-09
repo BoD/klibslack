@@ -28,6 +28,6 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonResponseMetadata(
+internal data class JsonResponseMetadata(
   val next_cursor: String?,
 )

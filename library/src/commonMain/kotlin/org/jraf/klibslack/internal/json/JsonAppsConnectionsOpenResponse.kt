@@ -27,7 +27,7 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonAppsConnectionsOpenResponse(
+internal data class JsonAppsConnectionsOpenResponse(
   val ok: Boolean,
   val url: String,
 )

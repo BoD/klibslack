@@ -27,7 +27,7 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonChatPostMessageRequest(
+internal data class JsonChatPostMessageRequest(
   val channel: String,
   val text: String,
   val thread_ts: String?,

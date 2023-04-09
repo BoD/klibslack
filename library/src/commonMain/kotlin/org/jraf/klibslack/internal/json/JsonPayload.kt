@@ -28,12 +28,12 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonPayloadEnvelope(
+internal data class JsonPayloadEnvelope(
   val envelope_id: String,
   val payload: JsonPayload,
 )
 
 @Serializable
-data class JsonPayload (
-  val event: JsonEvent
+internal data class JsonPayload(
+  val event: JsonEvent,
 )

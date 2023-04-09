@@ -31,7 +31,7 @@ import org.jraf.klibslack.model.MessageDeletedEvent
 import org.jraf.klibslack.model.ReactionAddedEvent
 import org.jraf.klibslack.model.UnknownEvent
 
-data class MessageAddedEventImpl(
+internal data class MessageAddedEventImpl(
   override val ts: String,
   override val user: String,
   override val channel: String,
@@ -39,7 +39,7 @@ data class MessageAddedEventImpl(
   override val text: String,
 ) : MessageAddedEvent
 
-data class MessageChangedEventImpl(
+internal data class MessageChangedEventImpl(
   override val ts: String,
   override val user: String,
   override val channel: String,
@@ -49,7 +49,7 @@ data class MessageChangedEventImpl(
   override val changedTs: String?,
 ) : MessageChangedEvent
 
-data class MessageDeletedEventImpl(
+internal data class MessageDeletedEventImpl(
   override val ts: String,
   override val user: String,
   override val channel: String,
@@ -58,7 +58,7 @@ data class MessageDeletedEventImpl(
   override val deletedTs: String?,
 ) : MessageDeletedEvent
 
-data class ReactionAddedEventImpl(
+internal data class ReactionAddedEventImpl(
   override val user: String,
   override val reaction: String,
   override val eventTs: String,
@@ -67,6 +67,6 @@ data class ReactionAddedEventImpl(
   override val ts: String,
 ) : ReactionAddedEvent
 
-data class UnknownEventImpl(
+internal data class UnknownEventImpl(
   override val type: String,
 ) : UnknownEvent

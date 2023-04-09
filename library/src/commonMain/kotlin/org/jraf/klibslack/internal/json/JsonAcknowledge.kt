@@ -28,4 +28,4 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonAcknowledge(val envelope_id: String)
+internal data class JsonAcknowledge(val envelope_id: String)

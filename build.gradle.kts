@@ -3,7 +3,7 @@ allprojects {
     mavenCentral()
   }
 
-  group = "org.jraf"
+  group = "org.jraf.klibslack"
   version = "1.0.0"
 }
 

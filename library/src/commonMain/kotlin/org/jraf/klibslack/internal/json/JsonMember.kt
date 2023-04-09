@@ -27,7 +27,7 @@ package org.jraf.klibslack.internal.json
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class JsonMember(
+internal data class JsonMember(
   val id: String,
   val name: String,
   val real_name: String? = null,
@@ -35,7 +35,7 @@ data class JsonMember(
   val profile: JsonProfile,
 ) {
   @Serializable
-  data class JsonProfile(
+  internal data class JsonProfile(
     val real_name: String,
     val display_name: String,
   )
