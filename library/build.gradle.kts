@@ -32,6 +32,7 @@ tasks {
 
 kotlin {
   jvm()
+  jvmToolchain(11)
 
   sourceSets {
     val commonMain by getting {
