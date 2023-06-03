@@ -29,8 +29,9 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 internal data class JsonPayloadEnvelope(
-  val envelope_id: String,
-  val payload: JsonPayload,
+  val type: String? = null,
+  val envelope_id: String? = null,
+  val payload: JsonPayload? = null,
 )
 
 @Serializable

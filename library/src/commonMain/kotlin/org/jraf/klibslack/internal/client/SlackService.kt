@@ -120,11 +120,19 @@ internal class SlackService(
           break
         }
         LOGGER.debug("WebSocket in: $payloadEnvelope")
-        val ack = JsonAcknowledge(envelope_id = payloadEnvelope.envelope_id)
-        LOGGER.debug("WebSocket out: $ack")
-        sendSerialized(ack)
+
+        if (payloadEnvelope.type == "disconnect") {
+          LOGGER.warn("Disconnect message received, closing WebSocket")
+          throw Exception("Disconnect message received")
+        }
+
+        payloadEnvelope.envelope_id?.let { envelopeId ->
+          val ack = JsonAcknowledge(envelope_id = envelopeId)
+          LOGGER.debug("WebSocket out: $ack")
+          sendSerialized(ack)
+        }
         onEvent(
-          payloadEnvelope.payload.event.let { jsonEvent ->
+          payloadEnvelope.payload!!.event.let { jsonEvent ->
             when (jsonEvent) {
               is JsonEvent.JsonMessageEvent ->
                 when (jsonEvent.subtype) {
