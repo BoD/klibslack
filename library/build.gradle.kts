@@ -25,7 +25,7 @@ tasks {
   // Generate Javadoc (Dokka) Jar
   register<Jar>("dokkaHtmlJar") {
     archiveClassifier.set("javadoc")
-    from("$buildDir/dokka")
+    from("${layout.buildDirectory}/dokka")
     dependsOn(dokkaHtml)
   }
 }

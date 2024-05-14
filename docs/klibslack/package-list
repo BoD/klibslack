@@ -1,0 +1,75 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:org.jraf.klibslack.client.configuration////PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/ClientConfiguration///PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-client-configuration/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/ClientConfiguration/ClientConfiguration/#kotlin.String#kotlin.String#org.jraf.klibslack.client.configuration.HttpConfiguration/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-client-configuration/-client-configuration.html
+$dokka.location:org.jraf.klibslack.client.configuration/ClientConfiguration/appToken/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-client-configuration/app-token.html
+$dokka.location:org.jraf.klibslack.client.configuration/ClientConfiguration/botUserOAuthToken/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-client-configuration/bot-user-o-auth-token.html
+$dokka.location:org.jraf.klibslack.client.configuration/ClientConfiguration/httpConfiguration/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-client-configuration/http-configuration.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpConfiguration///PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-configuration/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpConfiguration/HttpConfiguration/#org.jraf.klibslack.client.configuration.HttpLoggingLevel#org.jraf.klibslack.client.configuration.HttpProxy?/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-configuration/-http-configuration.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpConfiguration/httpProxy/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-configuration/http-proxy.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpConfiguration/loggingLevel/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-configuration/logging-level.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel.ALL///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/-a-l-l/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel.BODY///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/-b-o-d-y/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel.HEADERS///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/-h-e-a-d-e-r-s/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel.INFO///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/-i-n-f-o/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel.NONE///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/-n-o-n-e/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel///PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel/valueOf/#kotlin.String/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/value-of.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpLoggingLevel/values/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-logging-level/values.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpProxy///PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-proxy/index.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpProxy/HttpProxy/#kotlin.String#kotlin.Int/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-proxy/-http-proxy.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpProxy/host/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-proxy/host.html
+$dokka.location:org.jraf.klibslack.client.configuration/HttpProxy/port/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client.configuration/-http-proxy/port.html
+$dokka.location:org.jraf.klibslack.client////PointingToDeclaration/klibslack/org.jraf.klibslack.client/index.html
+$dokka.location:org.jraf.klibslack.client/SlackClient.Companion///PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/-companion/index.html
+$dokka.location:org.jraf.klibslack.client/SlackClient.Companion/newInstance/#org.jraf.klibslack.client.configuration.ClientConfiguration/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/-companion/new-instance.html
+$dokka.location:org.jraf.klibslack.client/SlackClient///PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/index.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/appsConnectionsOpen/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/apps-connections-open.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/chatPostMessage/#kotlin.String#kotlin.String#kotlin.String?/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/chat-post-message.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/getAllMembers/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-all-members.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/openWebSocket/#kotlin.String#kotlin.coroutines.SuspendFunction1[org.jraf.klibslack.model.Event,kotlin.Unit]/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/open-web-socket.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/reactionsAdd/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/reactions-add.html
+$dokka.location:org.jraf.klibslack.model////PointingToDeclaration/klibslack/org.jraf.klibslack.model/index.html
+$dokka.location:org.jraf.klibslack.model/Event///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-event/index.html
+$dokka.location:org.jraf.klibslack.model/Member///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/index.html
+$dokka.location:org.jraf.klibslack.model/Member/displayName/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/display-name.html
+$dokka.location:org.jraf.klibslack.model/Member/id/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/id.html
+$dokka.location:org.jraf.klibslack.model/Member/isBot/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/is-bot.html
+$dokka.location:org.jraf.klibslack.model/Member/name/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/name.html
+$dokka.location:org.jraf.klibslack.model/Member/realName/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/real-name.html
+$dokka.location:org.jraf.klibslack.model/MessageAddedEvent///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-added-event/index.html
+$dokka.location:org.jraf.klibslack.model/MessageAddedEvent/channel/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-added-event/channel.html
+$dokka.location:org.jraf.klibslack.model/MessageAddedEvent/text/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-added-event/text.html
+$dokka.location:org.jraf.klibslack.model/MessageAddedEvent/threadTs/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-added-event/thread-ts.html
+$dokka.location:org.jraf.klibslack.model/MessageAddedEvent/ts/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-added-event/ts.html
+$dokka.location:org.jraf.klibslack.model/MessageAddedEvent/user/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-added-event/user.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/index.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/changedTs/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/changed-ts.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/channel/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/channel.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/newText/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/new-text.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/previousText/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/previous-text.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/threadTs/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/thread-ts.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/ts/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/ts.html
+$dokka.location:org.jraf.klibslack.model/MessageChangedEvent/user/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-changed-event/user.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/index.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent/channel/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/channel.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent/deletedText/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/deleted-text.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent/deletedTs/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/deleted-ts.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent/threadTs/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/thread-ts.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent/ts/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/ts.html
+$dokka.location:org.jraf.klibslack.model/MessageDeletedEvent/user/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-message-deleted-event/user.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/index.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent/channel/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/channel.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent/eventTs/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/event-ts.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent/reaction/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/reaction.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent/ts/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/ts.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent/type/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/type.html
+$dokka.location:org.jraf.klibslack.model/ReactionAddedEvent/user/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-reaction-added-event/user.html
+$dokka.location:org.jraf.klibslack.model/UnknownEvent///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-unknown-event/index.html
+$dokka.location:org.jraf.klibslack.model/UnknownEvent/type/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-unknown-event/type.html
+org.jraf.klibslack.client
+org.jraf.klibslack.client.configuration
+org.jraf.klibslack.model
+

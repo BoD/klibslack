@@ -12,3 +12,4 @@ plugins {
 }
 
 // `./gradlew refreshVersions` to update dependencies
+// `./gradlew publishToMavenLocal` to publish locally
