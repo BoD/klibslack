@@ -15,7 +15,7 @@ tasks {
       val outputWithPackageDir = File(outputDir, "org/jraf/klibslack/internal").apply { mkdirs() }
       File(outputWithPackageDir, "Version.kt").writeText(
         """
-          package org.jraf.klibnotion.internal
+          package org.jraf.klibslack.internal
           internal const val VERSION = "${project.version}"
         """.trimIndent()
       )
