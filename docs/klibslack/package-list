@@ -28,10 +28,14 @@ $dokka.location:org.jraf.klibslack.client/SlackClient.Companion/newInstance/#org
 $dokka.location:org.jraf.klibslack.client/SlackClient///PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/index.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/appsConnectionsOpen/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/apps-connections-open.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/chatPostMessage/#kotlin.String#kotlin.String#kotlin.String?/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/chat-post-message.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/getAllChannels/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-all-channels.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/getAllMembers/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-all-members.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/openWebSocket/#kotlin.String#kotlin.coroutines.SuspendFunction1[org.jraf.klibslack.model.Event,kotlin.Unit]/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/open-web-socket.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/reactionsAdd/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/reactions-add.html
 $dokka.location:org.jraf.klibslack.model////PointingToDeclaration/klibslack/org.jraf.klibslack.model/index.html
+$dokka.location:org.jraf.klibslack.model/Channel///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-channel/index.html
+$dokka.location:org.jraf.klibslack.model/Channel/id/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-channel/id.html
+$dokka.location:org.jraf.klibslack.model/Channel/name/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-channel/name.html
 $dokka.location:org.jraf.klibslack.model/Event///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-event/index.html
 $dokka.location:org.jraf.klibslack.model/Member///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/index.html
 $dokka.location:org.jraf.klibslack.model/Member/displayName/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/display-name.html

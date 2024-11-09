@@ -50,6 +50,7 @@ import io.ktor.websocket.readText
 import org.jraf.klibslack.internal.json.JsonAcknowledge
 import org.jraf.klibslack.internal.json.JsonAppsConnectionsOpenResponse
 import org.jraf.klibslack.internal.json.JsonChatPostMessageRequest
+import org.jraf.klibslack.internal.json.JsonConversationsListResponse
 import org.jraf.klibslack.internal.json.JsonEvent
 import org.jraf.klibslack.internal.json.JsonPayloadEnvelope
 import org.jraf.klibslack.internal.json.JsonReactionAddRequest
@@ -83,6 +84,17 @@ internal class SlackService(
   suspend fun usersList(botUserOAuthToken: String, cursor: String? = null, limit: Int = 1000): JsonUsersListResponse {
     return httpClient.get("$URL_BASE/users.list") {
       header("Authorization", "Bearer $botUserOAuthToken")
+      parameter("cursor", cursor)
+      parameter("limit", limit)
+      contentType(ContentType.Application.Json)
+    }.body()
+  }
+
+  // https://api.slack.com/methods/conversations.list
+  suspend fun conversationsList(botUserOAuthToken: String, cursor: String? = null, limit: Int = 1000): JsonConversationsListResponse {
+    return httpClient.get("$URL_BASE/conversations.list") {
+      header("Authorization", "Bearer $botUserOAuthToken")
+      parameter("types", "public_channel,private_channel")
       parameter("cursor", cursor)
       parameter("limit", limit)
       contentType(ContentType.Application.Json)

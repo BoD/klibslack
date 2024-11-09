@@ -22,30 +22,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+package org.jraf.klibslack.internal.json
 
-package org.jraf.klibslack.client
+import kotlinx.serialization.Serializable
 
-import org.jraf.klibslack.client.configuration.ClientConfiguration
-import org.jraf.klibslack.internal.client.SlackClientImpl
-import org.jraf.klibslack.model.Channel
-import org.jraf.klibslack.model.Event
-import org.jraf.klibslack.model.Member
+@Serializable
+internal data class JsonConversationsListResponse(
+  val ok: Boolean,
+  val channels: List<JsonChannel>,
+  val response_metadata: JsonResponseMetadata?,
+)
 
-interface SlackClient {
-  companion object {
-    @JvmStatic
-    fun newInstance(configuration: ClientConfiguration): SlackClient =
-      SlackClientImpl(configuration)
-  }
-
-  suspend fun getAllChannels(): List<Channel>
-
-  suspend fun getAllMembers(): List<Member>
-
-  suspend fun chatPostMessage(channel: String, text: String, threadTs: String? = null)
-
-  suspend fun reactionsAdd(channel: String, timestamp: String, name: String)
-
-  suspend fun appsConnectionsOpen(): String
-  suspend fun openWebSocket(url: String, onEvent: suspend (event: Event) -> Unit)
-}

@@ -44,11 +44,14 @@ import kotlinx.serialization.modules.polymorphic
 import org.jraf.klibslack.client.SlackClient
 import org.jraf.klibslack.client.configuration.ClientConfiguration
 import org.jraf.klibslack.client.configuration.HttpLoggingLevel
+import org.jraf.klibslack.internal.json.JsonChannel
 import org.jraf.klibslack.internal.json.JsonChatPostMessageRequest
 import org.jraf.klibslack.internal.json.JsonEvent
 import org.jraf.klibslack.internal.json.JsonMember
 import org.jraf.klibslack.internal.json.JsonReactionAddRequest
+import org.jraf.klibslack.internal.model.ChannelImpl
 import org.jraf.klibslack.internal.model.MemberImpl
+import org.jraf.klibslack.model.Channel
 import org.jraf.klibslack.model.Event
 import org.jraf.klibslack.model.Member
 import org.slf4j.LoggerFactory
@@ -135,6 +138,30 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
           realName = it.profile.real_name,
           displayName = it.profile.display_name,
           isBot = it.is_bot
+        )
+      }
+    } catch (e: Exception) {
+      LOGGER.warn("Could not make network call", e)
+      throw e
+    }
+  }
+
+  override suspend fun getAllChannels(): List<Channel> {
+    return try {
+      val channelList = mutableListOf<JsonChannel>()
+      var cursor: String? = null
+      do {
+        LOGGER.debug("Calling conversationsList cursor=$cursor")
+        val response = service.conversationsList(botUserOAuthToken = clientConfiguration.botUserOAuthToken, cursor = cursor)
+        channelList += response.channels
+        cursor = response.response_metadata?.next_cursor?.ifBlank { null }
+        // Avoid hitting the rate limit
+        delay(3000)
+      } while (cursor != null)
+      channelList.map {
+        ChannelImpl(
+          id = it.id,
+          name = it.name,
         )
       }
     } catch (e: Exception) {
