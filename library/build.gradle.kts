@@ -39,10 +39,6 @@ kotlin {
       kotlin.srcDir(tasks.getByName("generateVersionKt").outputs.files)
 
       dependencies {
-        // Slf4j
-        implementation("org.slf4j:slf4j-api:_")
-        implementation("org.slf4j:slf4j-simple:_")
-
         // Ktor
         implementation(Ktor.client.core)
         implementation(Ktor.client.contentNegotiation)
@@ -58,7 +54,14 @@ kotlin {
 
     val jvmMain by getting {
       dependencies {
+        // Slf4j
+        implementation("org.slf4j:slf4j-api:_")
+        implementation("org.slf4j:slf4j-simple:_")
+
+        // Coroutines
         implementation(KotlinX.coroutines.jdk9)
+
+        // Ktor OkHttp
         implementation(Ktor.client.okHttp)
       }
     }
@@ -86,8 +89,7 @@ publishing {
       url.set("https://github.com/BoD/klibslack")
       licenses {
         license {
-          name.set("The Apache License, Version 2.0")
-          url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+          name.set("Apache-2.0")
           distribution.set("repo")
         }
       }

@@ -29,11 +29,11 @@ import io.ktor.client.HttpClient
 import io.ktor.client.engine.ProxyBuilder
 import io.ktor.client.plugins.HttpTimeout
 import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
-import io.ktor.client.plugins.logging.DEFAULT
 import io.ktor.client.plugins.logging.LogLevel
 import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.plugins.websocket.WebSockets
+import io.ktor.client.plugins.websocket.pingInterval
 import io.ktor.http.URLBuilder
 import io.ktor.serialization.kotlinx.KotlinxWebsocketSerializationConverter
 import io.ktor.serialization.kotlinx.json.json
@@ -52,6 +52,7 @@ import org.jraf.klibslack.internal.model.MemberImpl
 import org.jraf.klibslack.model.Event
 import org.jraf.klibslack.model.Member
 import org.slf4j.LoggerFactory
+import kotlin.time.Duration.Companion.seconds
 
 internal class SlackClientImpl(private val clientConfiguration: ClientConfiguration) : SlackClient {
   private val LOGGER = LoggerFactory.getLogger(SlackClientImpl::class.java)
@@ -82,7 +83,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
         socketTimeoutMillis = 60_000
       }
       install(WebSockets) {
-        pingInterval = 60_000
+        pingInterval = 60.seconds
         contentConverter = KotlinxWebsocketSerializationConverter(json)
       }
       engine {
