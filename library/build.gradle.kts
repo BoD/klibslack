@@ -6,28 +6,26 @@ plugins {
   id("signing")
 }
 
-tasks {
-  // Generate a Version.kt file with a constant for the version name
-  register("generateVersionKt") {
-    val outputDir = layout.buildDirectory.dir("generated/source/kotlin").get().asFile
-    outputs.dir(outputDir)
-    doFirst {
-      val outputWithPackageDir = File(outputDir, "org/jraf/klibslack/internal").apply { mkdirs() }
-      File(outputWithPackageDir, "Version.kt").writeText(
-        """
-          package org.jraf.klibslack.internal
-          internal const val VERSION = "${project.version}"
-        """.trimIndent()
-      )
-    }
+// Generate a Version.kt file with a constant for the version name
+val generateVersionKtTask = tasks.register("generateVersionKt") {
+  val outputDir = layout.buildDirectory.dir("generated/source/kotlin").get().asFile
+  outputs.dir(outputDir)
+  doFirst {
+    val outputWithPackageDir = File(outputDir, "org/jraf/klibslack/internal").apply { mkdirs() }
+    File(outputWithPackageDir, "Version.kt").writeText(
+      """
+        package org.jraf.klibslack.internal
+        internal const val VERSION = "${rootProject.version}"
+      """.trimIndent()
+    )
   }
+}
 
-  // Generate Javadoc (Dokka) Jar
-  register<Jar>("dokkaHtmlJar") {
-    archiveClassifier.set("javadoc")
-    from("${layout.buildDirectory}/dokka")
-    dependsOn(dokkaHtml)
-  }
+// Generate Javadoc (Dokka) Jar
+tasks.register<Jar>("dokkaHtmlJar") {
+  archiveClassifier.set("javadoc")
+  from("${layout.buildDirectory}/dokka")
+  dependsOn(tasks.dokkaGenerate)
 }
 
 kotlin {
@@ -35,8 +33,8 @@ kotlin {
   jvmToolchain(11)
 
   sourceSets {
-    val commonMain by getting {
-      kotlin.srcDir(tasks.getByName("generateVersionKt").outputs.files)
+    commonMain {
+      kotlin.srcDir(generateVersionKtTask)
 
       dependencies {
         // Ktor
@@ -52,7 +50,7 @@ kotlin {
       }
     }
 
-    val jvmMain by getting {
+    jvmMain {
       dependencies {
         // Slf4j
         implementation("org.slf4j:slf4j-api:_")
@@ -89,7 +87,8 @@ publishing {
       url.set("https://github.com/BoD/klibslack")
       licenses {
         license {
-          name.set("Apache-2.0")
+          name.set("The Apache License, Version 2.0")
+          url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
           distribution.set("repo")
         }
       }
@@ -133,8 +132,10 @@ tasks.withType<AbstractPublishToMaven>().configureEach {
   dependsOn(dependsOnTasks)
 }
 
-tasks.dokkaHtml.configure {
-  outputDirectory.set(rootProject.file("docs"))
+dokka {
+  dokkaPublications.html {
+    outputDirectory.set(rootProject.file("docs"))
+  }
 }
 
 // Run `./gradlew dokkaHtml` to generate the docs

@@ -50,9 +50,11 @@ import org.jraf.klibslack.internal.json.JsonEvent
 import org.jraf.klibslack.internal.json.JsonMember
 import org.jraf.klibslack.internal.json.JsonReactionAddRequest
 import org.jraf.klibslack.internal.model.ChannelImpl
+import org.jraf.klibslack.internal.model.IdentityImpl
 import org.jraf.klibslack.internal.model.MemberImpl
 import org.jraf.klibslack.model.Channel
 import org.jraf.klibslack.model.Event
+import org.jraf.klibslack.model.Identity
 import org.jraf.klibslack.model.Member
 import org.slf4j.LoggerFactory
 import kotlin.time.Duration.Companion.seconds
@@ -62,7 +64,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
 
   private val service: SlackService by lazy {
     SlackService(
-      provideHttpClient(clientConfiguration)
+      provideHttpClient(clientConfiguration),
     )
   }
 
@@ -92,10 +94,12 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
       engine {
         // Setup a proxy if requested
         clientConfiguration.httpConfiguration.httpProxy?.let { httpProxy ->
-          proxy = ProxyBuilder.http(URLBuilder().apply {
-            host = httpProxy.host
-            port = httpProxy.port
-          }.build())
+          proxy = ProxyBuilder.http(
+            URLBuilder().apply {
+              host = httpProxy.host
+              port = httpProxy.port
+            }.build(),
+          )
         }
       }
       // Setup logging if requested
@@ -119,6 +123,24 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
     }
   }
 
+  override suspend fun getUserIdentity(): Identity {
+    return service.usersIdentity(clientConfiguration.botUserOAuthToken).user.let {
+      IdentityImpl(
+        name = it.name,
+        id = it.id,
+      )
+    }
+  }
+
+  override suspend fun getBotIdentity(): Identity {
+    return service.authTest(clientConfiguration.botUserOAuthToken).let {
+      IdentityImpl(
+        name = it.user,
+        id = it.user_id,
+      )
+    }
+  }
+
   override suspend fun getAllMembers(): List<Member> {
     return try {
       val memberList = mutableListOf<JsonMember>()
@@ -137,7 +159,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
           name = it.name,
           realName = it.profile.real_name,
           displayName = it.profile.display_name,
-          isBot = it.is_bot
+          isBot = it.is_bot,
         )
       }
     } catch (e: Exception) {
@@ -181,14 +203,14 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
   override suspend fun chatPostMessage(channel: String, text: String, threadTs: String?) {
     service.chatPostMessage(
       clientConfiguration.botUserOAuthToken,
-      JsonChatPostMessageRequest(channel = channel, text = text, thread_ts = threadTs)
+      JsonChatPostMessageRequest(channel = channel, text = text, thread_ts = threadTs),
     )
   }
 
   override suspend fun reactionsAdd(channel: String, timestamp: String, name: String) {
     service.reactionsAdd(
       clientConfiguration.botUserOAuthToken,
-      JsonReactionAddRequest(channel = channel, timestamp = timestamp, name = name)
+      JsonReactionAddRequest(channel = channel, timestamp = timestamp, name = name),
     )
   }
 }

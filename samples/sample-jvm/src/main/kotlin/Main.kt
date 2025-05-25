@@ -25,6 +25,8 @@
 
 import org.jraf.klibslack.client.SlackClient
 import org.jraf.klibslack.client.configuration.ClientConfiguration
+import org.jraf.klibslack.client.configuration.HttpConfiguration
+import org.jraf.klibslack.client.configuration.HttpLoggingLevel
 import org.slf4j.LoggerFactory
 import org.slf4j.simple.SimpleLogger
 
@@ -44,9 +46,14 @@ suspend fun main(av: Array<String>) {
     ClientConfiguration(
       appToken = appToken,
       botUserOAuthToken = botUserOAuthToken,
-    )
+      httpConfiguration = HttpConfiguration(
+        loggingLevel = HttpLoggingLevel.ALL,
+      ),
+    ),
   )
   LOGGER.info(slackClient.getAllMembers().toString())
+  LOGGER.info(slackClient.getAllChannels().toString())
+  LOGGER.info(slackClient.getBotIdentity().toString())
 
   val webSocketUrl = slackClient.appsConnectionsOpen()
   slackClient.openWebSocket(webSocketUrl) { event ->

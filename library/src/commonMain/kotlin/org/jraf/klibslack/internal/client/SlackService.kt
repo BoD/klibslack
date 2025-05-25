@@ -49,11 +49,13 @@ import io.ktor.websocket.WebSocketSession
 import io.ktor.websocket.readText
 import org.jraf.klibslack.internal.json.JsonAcknowledge
 import org.jraf.klibslack.internal.json.JsonAppsConnectionsOpenResponse
+import org.jraf.klibslack.internal.json.JsonAuthTestResponse
 import org.jraf.klibslack.internal.json.JsonChatPostMessageRequest
 import org.jraf.klibslack.internal.json.JsonConversationsListResponse
 import org.jraf.klibslack.internal.json.JsonEvent
 import org.jraf.klibslack.internal.json.JsonPayloadEnvelope
 import org.jraf.klibslack.internal.json.JsonReactionAddRequest
+import org.jraf.klibslack.internal.json.JsonUsersIdentityResponse
 import org.jraf.klibslack.internal.json.JsonUsersListResponse
 import org.jraf.klibslack.internal.model.MessageAddedEventImpl
 import org.jraf.klibslack.internal.model.MessageChangedEventImpl
@@ -71,6 +73,22 @@ internal class SlackService(
   }
 
   private val LOGGER = LoggerFactory.getLogger(SlackClientImpl::class.java)
+
+  // https://api.slack.com/methods/auth.test
+  suspend fun authTest(botUserOAuthToken: String): JsonAuthTestResponse {
+    return httpClient.get("$URL_BASE/auth.test") {
+      header("Authorization", "Bearer $botUserOAuthToken")
+      contentType(ContentType.Application.Json)
+    }.body()
+  }
+
+  // https://api.slack.com/methods/users.identity
+  suspend fun usersIdentity(botUserOAuthToken: String): JsonUsersIdentityResponse {
+    return httpClient.get("$URL_BASE/users.identity") {
+      header("Authorization", "Bearer $botUserOAuthToken")
+      contentType(ContentType.Application.Json)
+    }.body()
+  }
 
   // https://api.slack.com/methods/apps.connections.open
   suspend fun appsConnectionsOpen(appToken: String): JsonAppsConnectionsOpenResponse {
@@ -196,7 +214,7 @@ internal class SlackService(
                 type = jsonEvent.type,
               )
             }
-          }
+          },
         )
       }
     }
@@ -208,7 +226,7 @@ internal class SlackService(
 
     return myReceiveDeserializedBase<T>(
       converter,
-      call.request.headers.suitableCharset()
+      call.request.headers.suitableCharset(),
     ) as T
   }
 
@@ -222,7 +240,7 @@ internal class SlackService(
     if (!converter.isApplicable(frame)) {
       throw WebsocketDeserializeException(
         "Converter doesn't support frame type ${frame.frameType.name}",
-        frame = frame
+        frame = frame,
       )
     }
 
@@ -230,7 +248,7 @@ internal class SlackService(
     val result = converter.deserialize(
       charset = charset,
       typeInfo = typeInfo,
-      content = frame
+      content = frame,
     )
 
     if (result is T) return result
@@ -242,7 +260,7 @@ internal class SlackService(
     throw WebsocketDeserializeException(
       "Can't deserialize value : expected value of type ${T::class.simpleName}," +
         " got ${result::class.simpleName}",
-      frame = frame
+      frame = frame,
     )
   }
 }
