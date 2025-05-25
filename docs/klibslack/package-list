@@ -30,6 +30,8 @@ $dokka.location:org.jraf.klibslack.client/SlackClient/appsConnectionsOpen/#/Poin
 $dokka.location:org.jraf.klibslack.client/SlackClient/chatPostMessage/#kotlin.String#kotlin.String#kotlin.String?/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/chat-post-message.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/getAllChannels/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-all-channels.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/getAllMembers/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-all-members.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/getBotIdentity/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-bot-identity.html
+$dokka.location:org.jraf.klibslack.client/SlackClient/getUserIdentity/#/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/get-user-identity.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/openWebSocket/#kotlin.String#kotlin.coroutines.SuspendFunction1[org.jraf.klibslack.model.Event,kotlin.Unit]/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/open-web-socket.html
 $dokka.location:org.jraf.klibslack.client/SlackClient/reactionsAdd/#kotlin.String#kotlin.String#kotlin.String/PointingToDeclaration/klibslack/org.jraf.klibslack.client/-slack-client/reactions-add.html
 $dokka.location:org.jraf.klibslack.model////PointingToDeclaration/klibslack/org.jraf.klibslack.model/index.html
@@ -37,6 +39,9 @@ $dokka.location:org.jraf.klibslack.model/Channel///PointingToDeclaration/klibsl
 $dokka.location:org.jraf.klibslack.model/Channel/id/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-channel/id.html
 $dokka.location:org.jraf.klibslack.model/Channel/name/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-channel/name.html
 $dokka.location:org.jraf.klibslack.model/Event///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-event/index.html
+$dokka.location:org.jraf.klibslack.model/Identity///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-identity/index.html
+$dokka.location:org.jraf.klibslack.model/Identity/id/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-identity/id.html
+$dokka.location:org.jraf.klibslack.model/Identity/name/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-identity/name.html
 $dokka.location:org.jraf.klibslack.model/Member///PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/index.html
 $dokka.location:org.jraf.klibslack.model/Member/displayName/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/display-name.html
 $dokka.location:org.jraf.klibslack.model/Member/id/#/PointingToDeclaration/klibslack/org.jraf.klibslack.model/-member/id.html
@@ -76,4 +81,3 @@ $dokka.location:org.jraf.klibslack.model/UnknownEvent/type/#/PointingToDeclarati
 org.jraf.klibslack.client
 org.jraf.klibslack.client.configuration
 org.jraf.klibslack.model
-

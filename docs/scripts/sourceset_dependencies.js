@@ -1,1 +1,1 @@
-sourceset_dependencies='{":klibslack:dokkaHtml/commonMain":[],":klibslack:dokkaHtml/jvmMain":[":klibslack:dokkaHtml/commonMain"]}'
+sourceset_dependencies='{":klibslack/commonMain":[],":klibslack/jvmMain":[":klibslack/commonMain"]}'
