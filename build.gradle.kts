@@ -1,8 +1,4 @@
 allprojects {
-  repositories {
-    mavenCentral()
-  }
-
   group = "org.jraf"
   version = "1.0.0"
 }
