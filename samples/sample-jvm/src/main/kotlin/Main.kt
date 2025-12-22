@@ -23,24 +23,14 @@
  * limitations under the License.
  */
 
+import org.jraf.klibnanolog.logi
 import org.jraf.klibslack.client.SlackClient
 import org.jraf.klibslack.client.configuration.ClientConfiguration
 import org.jraf.klibslack.client.configuration.HttpConfiguration
 import org.jraf.klibslack.client.configuration.HttpLoggingLevel
-import org.slf4j.LoggerFactory
-import org.slf4j.simple.SimpleLogger
-
-private val LOGGER = run {
-  // This must be done before any logger is initialized
-  System.setProperty(SimpleLogger.DEFAULT_LOG_LEVEL_KEY, "trace")
-  System.setProperty(SimpleLogger.SHOW_DATE_TIME_KEY, "true")
-  System.setProperty(SimpleLogger.DATE_TIME_FORMAT_KEY, "yyyy-MM-dd HH:mm:ss")
-
-  LoggerFactory.getLogger("Main")
-}
 
 suspend fun main(av: Array<String>) {
-  LOGGER.info("Hello, world!")
+  logi("Hello, world!")
   val (appToken, botUserOAuthToken) = av
   val slackClient = SlackClient.newInstance(
     ClientConfiguration(
@@ -51,13 +41,13 @@ suspend fun main(av: Array<String>) {
       ),
     ),
   )
-  LOGGER.info(slackClient.getAllMembers().toString())
-  LOGGER.info(slackClient.getAllChannels().toString())
-  LOGGER.info(slackClient.getBotIdentity().toString())
+  logi(slackClient.getAllMembers().toString())
+  logi(slackClient.getAllChannels().toString())
+  logi(slackClient.getBotIdentity().toString())
 
   val webSocketUrl = slackClient.appsConnectionsOpen()
   slackClient.openWebSocket(webSocketUrl) { event ->
-    LOGGER.info(event.toString())
-    LOGGER.info("")
+    logi(event.toString())
+    logi("")
   }
 }

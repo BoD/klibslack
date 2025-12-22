@@ -41,6 +41,8 @@ import kotlinx.coroutines.delay
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.modules.SerializersModule
 import kotlinx.serialization.modules.polymorphic
+import org.jraf.klibnanolog.logd
+import org.jraf.klibnanolog.logw
 import org.jraf.klibslack.client.SlackClient
 import org.jraf.klibslack.client.configuration.ClientConfiguration
 import org.jraf.klibslack.client.configuration.HttpLoggingLevel
@@ -56,12 +58,9 @@ import org.jraf.klibslack.model.Channel
 import org.jraf.klibslack.model.Event
 import org.jraf.klibslack.model.Identity
 import org.jraf.klibslack.model.Member
-import org.slf4j.LoggerFactory
 import kotlin.time.Duration.Companion.seconds
 
 internal class SlackClientImpl(private val clientConfiguration: ClientConfiguration) : SlackClient {
-  private val LOGGER = LoggerFactory.getLogger(SlackClientImpl::class.java)
-
   private val service: SlackService by lazy {
     SlackService(
       provideHttpClient(clientConfiguration),
@@ -106,9 +105,8 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
       if (clientConfiguration.httpConfiguration.loggingLevel != HttpLoggingLevel.NONE) {
         install(Logging) {
           logger = object : Logger {
-            private val delegate = LoggerFactory.getLogger(SlackClient::class.java)!!
             override fun log(message: String) {
-              delegate.debug(message)
+              logd(message)
             }
           }
           level = when (clientConfiguration.httpConfiguration.loggingLevel) {
@@ -146,7 +144,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
       val memberList = mutableListOf<JsonMember>()
       var cursor: String? = null
       do {
-        LOGGER.debug("Calling usersList cursor=$cursor")
+        logd("Calling usersList cursor=$cursor")
         val response = service.usersList(botUserOAuthToken = clientConfiguration.botUserOAuthToken, cursor = cursor)
         memberList += response.members
         cursor = response.response_metadata?.next_cursor?.ifBlank { null }
@@ -163,7 +161,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
         )
       }
     } catch (e: Exception) {
-      LOGGER.warn("Could not make network call", e)
+      logw(e, "Could not make network call")
       throw e
     }
   }
@@ -173,7 +171,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
       val channelList = mutableListOf<JsonChannel>()
       var cursor: String? = null
       do {
-        LOGGER.debug("Calling conversationsList cursor=$cursor")
+        logd("Calling conversationsList cursor=$cursor")
         val response = service.conversationsList(botUserOAuthToken = clientConfiguration.botUserOAuthToken, cursor = cursor)
         channelList += response.channels
         cursor = response.response_metadata?.next_cursor?.ifBlank { null }
@@ -187,7 +185,7 @@ internal class SlackClientImpl(private val clientConfiguration: ClientConfigurat
         )
       }
     } catch (e: Exception) {
-      LOGGER.warn("Could not make network call", e)
+      logw(e, "Could not make network call")
       throw e
     }
   }
