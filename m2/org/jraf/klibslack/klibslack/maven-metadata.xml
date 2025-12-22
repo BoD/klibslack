@@ -3,11 +3,10 @@
   <groupId>org.jraf.klibslack</groupId>
   <artifactId>klibslack</artifactId>
   <versioning>
-    <latest>1.0.0-SNASPHOT</latest>
-    <release>1.0.0-SNASPHOT</release>
+    <latest>1.0.0-SNAPSHOT</latest>
     <versions>
-      <version>1.0.0-SNASPHOT</version>
+      <version>1.0.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20251222194022</lastUpdated>
+    <lastUpdated>20251222194623</lastUpdated>
   </versioning>
 </metadata>
