@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":klibslack/commonMain":[],":klibslack/jvmMain":[":klibslack/commonMain"]}'

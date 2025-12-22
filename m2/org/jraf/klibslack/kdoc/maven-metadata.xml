@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>org.jraf.klibslack</groupId>
+  <artifactId>kdoc</artifactId>
+  <versioning>
+    <latest>1.0.0-SNASPHOT</latest>
+    <release>1.0.0-SNASPHOT</release>
+    <versions>
+      <version>1.0.0-SNASPHOT</version>
+    </versions>
+    <lastUpdated>20251222194027</lastUpdated>
+  </versioning>
+</metadata>

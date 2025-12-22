@@ -1,0 +1,8 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+module:klibslack
+org.jraf.klibslack
+org.jraf.klibslack.client
+org.jraf.klibslack.client.configuration
+org.jraf.klibslack.model
