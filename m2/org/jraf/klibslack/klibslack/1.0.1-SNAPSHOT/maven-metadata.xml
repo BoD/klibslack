@@ -3,44 +3,44 @@
   <groupId>org.jraf.klibslack</groupId>
   <artifactId>klibslack</artifactId>
   <versioning>
-    <lastUpdated>20251223184140</lastUpdated>
+    <lastUpdated>20251228182253</lastUpdated>
     <snapshot>
-      <timestamp>20251223.184140</timestamp>
+      <timestamp>20251228.182253</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <extension>jar</extension>
-        <value>1.0.1-20251223.184140-1</value>
-        <updated>20251223184140</updated>
-      </snapshotVersion>
-      <snapshotVersion>
         <classifier>kotlin-tooling-metadata</classifier>
         <extension>json</extension>
-        <value>1.0.1-20251223.184140-1</value>
-        <updated>20251223184140</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>pom</extension>
-        <value>1.0.1-20251223.184140-1</value>
-        <updated>20251223184140</updated>
+        <value>1.0.1-20251228.182253-1</value>
+        <updated>20251228182253</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.0.1-20251223.184140-1</value>
-        <updated>20251223184140</updated>
+        <value>1.0.1-20251228.182253-1</value>
+        <updated>20251228182253</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>module</extension>
-        <value>1.0.1-20251223.184140-1</value>
-        <updated>20251223184140</updated>
+        <value>1.0.1-20251228.182253-1</value>
+        <updated>20251228182253</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.1-20251228.182253-1</value>
+        <updated>20251228182253</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0.1-20251228.182253-1</value>
+        <updated>20251228182253</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>1.0.1-20251223.184140-1</value>
-        <updated>20251223184140</updated>
+        <value>1.0.1-20251228.182253-1</value>
+        <updated>20251228182253</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
