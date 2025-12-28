@@ -3,22 +3,22 @@
   <groupId>org.jraf.klibslack</groupId>
   <artifactId>kdoc</artifactId>
   <versioning>
-    <lastUpdated>20251228182253</lastUpdated>
+    <lastUpdated>20251228182342</lastUpdated>
     <snapshot>
-      <timestamp>20251228.182253</timestamp>
+      <timestamp>20251228.182342</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
-        <classifier>javadoc</classifier>
-        <extension>jar</extension>
-        <value>1.0.1-20251228.182253-1</value>
-        <updated>20251228182253</updated>
+        <extension>pom</extension>
+        <value>1.0.1-20251228.182342-1</value>
+        <updated>20251228182342</updated>
       </snapshotVersion>
       <snapshotVersion>
-        <extension>pom</extension>
-        <value>1.0.1-20251228.182253-1</value>
-        <updated>20251228182253</updated>
+        <classifier>javadoc</classifier>
+        <extension>jar</extension>
+        <value>1.0.1-20251228.182342-1</value>
+        <updated>20251228182342</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
