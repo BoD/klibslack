@@ -1,0 +1,172 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "url": "../../klibslack/1.0.2/klibslack-1.0.2.module",
+    "group": "org.jraf.klibslack",
+    "module": "klibslack",
+    "version": "1.0.2",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.3.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "jvmApiElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "klibslack-jvm-1.0.2.jar",
+          "url": "klibslack-jvm-1.0.2.jar",
+          "size": 202873,
+          "sha512": "05308680525440099ec9f5d6da2313b561d36bb14dd65adc5c11db3b3e2da9e50cf5f5237cf24d0baa951366a2888185d2e49753eaba1680847b36964aa9bb06",
+          "sha256": "7d42ff21ddc7e2dcf079739176b4524125ebdb504036eccd0662f487b59354fd",
+          "sha1": "1610ff94e1b131feed5af4ad970e5b4fcfb24326",
+          "md5": "9fc8a07c102dfca42bf8382b74799312"
+        }
+      ]
+    },
+    {
+      "name": "jvmRuntimeElements-published",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.2.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-jdk9",
+          "version": {
+            "requires": "1.10.2"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-okhttp",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-core",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-content-negotiation",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-auth",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-logging",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-client-websockets",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "io.ktor",
+          "module": "ktor-serialization-kotlinx-json",
+          "version": {
+            "requires": "3.4.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-serialization-json",
+          "version": {
+            "requires": "1.10.0"
+          }
+        },
+        {
+          "group": "org.jraf.klibnanolog",
+          "module": "klibnanolog",
+          "version": {
+            "requires": "1.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "klibslack-jvm-1.0.2.jar",
+          "url": "klibslack-jvm-1.0.2.jar",
+          "size": 202873,
+          "sha512": "05308680525440099ec9f5d6da2313b561d36bb14dd65adc5c11db3b3e2da9e50cf5f5237cf24d0baa951366a2888185d2e49753eaba1680847b36964aa9bb06",
+          "sha256": "7d42ff21ddc7e2dcf079739176b4524125ebdb504036eccd0662f487b59354fd",
+          "sha1": "1610ff94e1b131feed5af4ad970e5b4fcfb24326",
+          "md5": "9fc8a07c102dfca42bf8382b74799312"
+        }
+      ]
+    },
+    {
+      "name": "jvmSourcesElements-published",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "klibslack-jvm-1.0.2-sources.jar",
+          "url": "klibslack-jvm-1.0.2-sources.jar",
+          "size": 30513,
+          "sha512": "d5166a9bed47d904e2fd1ad21f41ed67a7ecb23ac4b471cda552ec1913730b764deb98ae99a76a0d57191d0660f4df48b45ad0f6cd1f9c0df1aa8a93e8a8b812",
+          "sha256": "6123e725e61e0535aa67f0a46f92f97250732a3a21498d37f8c1a2c2b2046f55",
+          "sha1": "d05641aa15549c4821ab2c6736c7922137bcbb01",
+          "md5": "202c6276ef8de5a3b4b4150edf3e9550"
+        }
+      ]
+    }
+  ]
+}
