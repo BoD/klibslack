@@ -1,8 +1,8 @@
 import com.gradleup.librarian.gradle.Librarian
 
 plugins {
-  kotlin("multiplatform")
-  kotlin("plugin.serialization")
+  alias(libs.plugins.kotlin.multiplatform)
+  alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -12,28 +12,28 @@ kotlin {
     commonMain {
       dependencies {
         // Ktor
-        implementation(Ktor.client.core)
-        implementation(Ktor.client.contentNegotiation)
-        implementation(Ktor.client.auth)
-        implementation(Ktor.client.logging)
-        implementation("io.ktor:ktor-client-websockets:_")
-        implementation(Ktor.plugins.serialization.kotlinx.json)
+        implementation(libs.ktor.client.core)
+        implementation(libs.ktor.client.contentNegotiation)
+        implementation(libs.ktor.client.auth)
+        implementation(libs.ktor.client.logging)
+        implementation(libs.ktor.client.websockets)
+        implementation(libs.ktor.serialization.kotlinx.json)
 
         // Serialization
-        implementation(KotlinX.serialization.json)
+        implementation(libs.kotlinx.serialization.json)
 
         // Logging
-        implementation("org.jraf.klibnanolog:klibnanolog:_")
+        implementation(libs.klibnanolog)
       }
     }
 
     jvmMain {
       dependencies {
         // Coroutines
-        implementation(KotlinX.coroutines.jdk9)
+        implementation(libs.kotlinx.coroutines.jdk9)
 
         // Ktor OkHttp
-        implementation(Ktor.client.okHttp)
+        implementation(libs.ktor.client.okhttp)
       }
     }
   }

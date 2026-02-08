@@ -1,13 +1,13 @@
 plugins {
-  kotlin("jvm")
+  alias(libs.plugins.kotlin.jvm)
 }
 
 dependencies {
   // Kotlin
-  implementation(KotlinX.coroutines.jdk9)
+  implementation(libs.kotlinx.coroutines.jdk9)
 
   // Logging
-  implementation("org.jraf.klibnanolog:klibnanolog:_")
+  implementation(libs.klibnanolog)
 
   // Library
   implementation(project(":klibslack"))
