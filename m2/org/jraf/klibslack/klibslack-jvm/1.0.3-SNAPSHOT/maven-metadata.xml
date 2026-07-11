@@ -3,38 +3,38 @@
   <groupId>org.jraf.klibslack</groupId>
   <artifactId>klibslack-jvm</artifactId>
   <versioning>
-    <lastUpdated>20260711133322</lastUpdated>
+    <lastUpdated>20260711133443</lastUpdated>
     <snapshot>
-      <timestamp>20260711.133322</timestamp>
+      <timestamp>20260711.133443</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <classifier>javadoc</classifier>
         <extension>jar</extension>
-        <value>1.0.3-20260711.133322-1</value>
-        <updated>20260711133322</updated>
+        <value>1.0.3-20260711.133443-1</value>
+        <updated>20260711133443</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0.3-20260711.133443-1</value>
+        <updated>20260711133443</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>module</extension>
+        <value>1.0.3-20260711.133443-1</value>
+        <updated>20260711133443</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
-        <value>1.0.3-20260711.133322-1</value>
-        <updated>20260711133322</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>jar</extension>
-        <value>1.0.3-20260711.133322-1</value>
-        <updated>20260711133322</updated>
+        <value>1.0.3-20260711.133443-1</value>
+        <updated>20260711133443</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0.3-20260711.133322-1</value>
-        <updated>20260711133322</updated>
-      </snapshotVersion>
-      <snapshotVersion>
-        <extension>module</extension>
-        <value>1.0.3-20260711.133322-1</value>
-        <updated>20260711133322</updated>
+        <value>1.0.3-20260711.133443-1</value>
+        <updated>20260711133443</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
