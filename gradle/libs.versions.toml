@@ -1,14 +1,16 @@
 [versions]
-kotlin = "2.3.20-Beta2"
-ktor = "3.4.0"
-kotlinx-serialization = "1.10.0"
-kotlinx-coroutines = "1.10.2"
+librarian = "0.2.2-SNAPSHOT"
+kotlin = "2.4.21"
+ktor = "3.6.0"
+kotlinx-serialization = "1.11.0"
+kotlinx-coroutines = "1.11.0"
+klibnanolog = "1.3.0"
 
 [plugins]
-librarian = { id = "com.gradleup.librarian", version = "0.2.2-SNAPSHOT" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.3.20-Beta2" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+librarian = { id = "com.gradleup.librarian", version.ref = "librarian" }
 
 [libraries]
 kotlinx-coroutines-jdk9 = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-jdk9", version.ref = "kotlinx-coroutines" }
@@ -20,4 +22,4 @@ ktor-client-websockets = { group = "io.ktor", name = "ktor-client-websockets", v
 ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
-klibnanolog = "org.jraf.klibnanolog:klibnanolog:1.0.1"
+klibnanolog = { group = "org.jraf.klibnanolog", name = "klibnanolog", version.ref = "klibnanolog" }
