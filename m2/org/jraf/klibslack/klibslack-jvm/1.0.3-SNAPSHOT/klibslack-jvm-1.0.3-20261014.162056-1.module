@@ -11,7 +11,7 @@
   },
   "createdBy": {
     "gradle": {
-      "version": "9.3.1"
+      "version": "9.8.1"
     }
   },
   "variants": [
@@ -37,11 +37,11 @@
         {
           "name": "klibslack-jvm-1.0.3-SNAPSHOT.jar",
           "url": "klibslack-jvm-1.0.3-SNAPSHOT.jar",
-          "size": 202881,
-          "sha512": "dcc9a07dcf6d8932adf83be5ce9a5a83240f2cb34a35fcf579096a148eb80c906f0a20102aed46ca64209cff0591b21b0545db377a1eb8993605b61a837b4cea",
-          "sha256": "19eed6bbf41d64e5503a5f4bf7949c193de0613e11b565857bb04a321ed20399",
-          "sha1": "d0a6c8a29f8d56334320682cdaafe2a41844481d",
-          "md5": "62ac5b11274dd51c0ca82e4af5e06c03"
+          "size": 206606,
+          "sha512": "5089f184c7549692c36cd3997d6b22ed3c35a104e55486d81b2504afb0e303447cb2784eb23ee755416eaa88ffd33e47e6c6e0441a616420392078f40f760f0d",
+          "sha256": "58261c25bcd73db2b3de524b9bd3b42cbb5df1c12cc6cc62739471e2e487d687",
+          "sha1": "2f22559aad35987face024ad9b7f99f535e667a3",
+          "md5": "77e004bf5405018d82eb14283e163d9e"
         }
       ]
     },
@@ -66,70 +66,70 @@
           "group": "org.jetbrains.kotlinx",
           "module": "kotlinx-coroutines-jdk9",
           "version": {
-            "requires": "1.10.2"
+            "requires": "1.11.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-client-okhttp",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-client-core",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-client-content-negotiation",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-client-auth",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-client-logging",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-client-websockets",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "io.ktor",
           "module": "ktor-serialization-kotlinx-json",
           "version": {
-            "requires": "3.4.0"
+            "requires": "3.6.0"
           }
         },
         {
           "group": "org.jetbrains.kotlinx",
           "module": "kotlinx-serialization-json",
           "version": {
-            "requires": "1.10.0"
+            "requires": "1.11.0"
           }
         },
         {
           "group": "org.jraf.klibnanolog",
           "module": "klibnanolog",
           "version": {
-            "requires": "1.0.1"
+            "requires": "1.3.0"
           }
         }
       ],
@@ -137,11 +137,11 @@
         {
           "name": "klibslack-jvm-1.0.3-SNAPSHOT.jar",
           "url": "klibslack-jvm-1.0.3-SNAPSHOT.jar",
-          "size": 202881,
-          "sha512": "dcc9a07dcf6d8932adf83be5ce9a5a83240f2cb34a35fcf579096a148eb80c906f0a20102aed46ca64209cff0591b21b0545db377a1eb8993605b61a837b4cea",
-          "sha256": "19eed6bbf41d64e5503a5f4bf7949c193de0613e11b565857bb04a321ed20399",
-          "sha1": "d0a6c8a29f8d56334320682cdaafe2a41844481d",
-          "md5": "62ac5b11274dd51c0ca82e4af5e06c03"
+          "size": 206606,
+          "sha512": "5089f184c7549692c36cd3997d6b22ed3c35a104e55486d81b2504afb0e303447cb2784eb23ee755416eaa88ffd33e47e6c6e0441a616420392078f40f760f0d",
+          "sha256": "58261c25bcd73db2b3de524b9bd3b42cbb5df1c12cc6cc62739471e2e487d687",
+          "sha1": "2f22559aad35987face024ad9b7f99f535e667a3",
+          "md5": "77e004bf5405018d82eb14283e163d9e"
         }
       ]
     },

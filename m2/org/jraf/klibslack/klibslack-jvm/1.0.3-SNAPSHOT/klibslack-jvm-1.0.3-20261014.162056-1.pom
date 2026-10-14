@@ -38,61 +38,61 @@
     <dependency>
       <groupId>org.jetbrains.kotlinx</groupId>
       <artifactId>kotlinx-coroutines-jdk9</artifactId>
-      <version>1.10.2</version>
+      <version>1.11.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-client-okhttp-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-client-core-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-client-content-negotiation-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-client-auth-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-client-logging-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-client-websockets-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>io.ktor</groupId>
       <artifactId>ktor-serialization-kotlinx-json-jvm</artifactId>
-      <version>3.4.0</version>
+      <version>3.6.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.jetbrains.kotlinx</groupId>
       <artifactId>kotlinx-serialization-json-jvm</artifactId>
-      <version>1.10.0</version>
+      <version>1.11.0</version>
       <scope>runtime</scope>
     </dependency>
     <dependency>
       <groupId>org.jraf.klibnanolog</groupId>
       <artifactId>klibnanolog-jvm</artifactId>
-      <version>1.0.1</version>
+      <version>1.3.0</version>
       <scope>runtime</scope>
     </dependency>
   </dependencies>
