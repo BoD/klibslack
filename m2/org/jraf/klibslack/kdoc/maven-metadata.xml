@@ -3,10 +3,10 @@
   <groupId>org.jraf.klibslack</groupId>
   <artifactId>kdoc</artifactId>
   <versioning>
-    <latest>1.0.3-SNAPSHOT</latest>
+    <latest>1.0.4-SNAPSHOT</latest>
     <versions>
-      <version>1.0.3-SNAPSHOT</version>
+      <version>1.0.4-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20261014162257</lastUpdated>
+    <lastUpdated>20261014162638</lastUpdated>
   </versioning>
 </metadata>
